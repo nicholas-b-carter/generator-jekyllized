@@ -13,7 +13,9 @@
   "repository": "sondr3/generator-jekyllized",
   "license": "MIT",
   "scripts": {
-    "test": "xo && nyc ava"
+    "test": "xo && nyc ava",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "generators",
@@ -27,7 +29,8 @@
     "lodash": "^4.11.1",
     "shelljs": "^0.7.0",
     "yargs": "^4.6.0",
-    "yeoman-generator": "^0.23.3"
+    "yeoman-generator": "^0.23.3",
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "ava": "^0.15.1",
@@ -43,5 +46,6 @@
       "generators/app/templates/**",
       "generators/jekyll/templates/**"
     ]
-  }
+  },
+  "snyk": true
 }
